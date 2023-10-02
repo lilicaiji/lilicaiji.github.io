@@ -1,26 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="zh-CN">
     <title>欢迎来到lilicaiji的网页</title>
 </head>
 <body>
-    <p>搜索</p>
-    <form action="https://www.baidu.com/s" target="_blank">
-        <input type="text" name="wd">
-        <button>去百度搜索</button>
-    </form>
+    <fieldset>
+        <legend>个人信息</legend>
+        <form action="https://search.jd.com/search" target="_blank">
+            <!--账号框-->
+            <label for="zhanghu">账户：</label>
+            <input type="text" name="account" maxlength="10" id="zhanghu"><br>
+            <!--密码框-->
+            <label for="mima">密码：</label>
+            <input type="password" name="pwd" maxlength="6" id="mima"><br>
+            <!--性别单选框-->
+            性别：
+            <label>
+                <input disabled type="radio" name="gender" value="male">男
+            </label>
+            <label>
+                <input disabled type="radio" name="gender" value="female">女
+            </label>
+            <label>
+                <input type="radio" name="gender" value="hemophrodite">人妖
+            </label>
+            <br>
+            <!--爱好多选框-->
+            爱好：
+            <label>
+                <input type="checkbox" name="hobby" value="smoke">抽烟
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="drink" checked>喝酒
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="perm">烫头
+            </label>
+            <br>
+            <label for="qita">其它：</label>
+            <textarea name="other" cols="22" rows="3" id="qita"></textarea><br>
+            籍贯：
+            <select name="place">
+                <option value="冀" selected>河北</option>
+                <option value="鲁">山东</option>
+                <option value="晋">山西</option>
+                <option value="粤">广东</option>
+            </select>
+            <!--隐藏域 防止别很多账号注册-->
+            <input type="hidden" name="from" value="baidu">
+            <br>
+            <!--<input type="submit" value="确认">-->
+            <button type="reset">重置</button>   
+            <button type="button">检测账户是否被注册</button>
+        </form>
+    </fieldset>
     <br>
-    <form action="https://cn.bing.com/search" target="_blank">
-        <input type="text" name="q">
-        <button>去必应搜索</button>
-    </form>
+    <fieldset>
+        <legend>搜索</legend>
+        <p>搜索</p>
+        <form action="https://www.baidu.com/s" target="_blank">
+            <input type="text" name="wd">
+            <button>百度搜索</button>
+        </form>
+        <br>
+        <form action="https://cn.bing.com/search" target="_blank">
+            <input type="text" name="q">
+            <button>必应搜索</button>
+        </form>
+        <br>
+        <form action="https://search.jd.com/search" target="_blank" method="get">
+            <input type="text" name="search">
+            <button>京东搜索</button>
+        </form>
+        <br>
+        <form action="https://search.bilibili.com/all" target="b">
+            <input type="text" name="keyword">
+            <button>b站搜索(本地)</button>
+        </form>
+        <iframe name="b" frameborder="0" width="700" height="300"></iframe>
+    </fieldset>
     <br>
-    <form action="https://search.jd.com/search" target="_blank" method="get">
-        <input type="text" name="search">
-        <button>去京东搜索</button>
-    </form>
-    <br>
+
+    
+
     <p>联系我</p>
     <a href="tel:15387553118">电话联系</a>
     <a href="mailto:2401137465@qq.com">邮件联系</a>
